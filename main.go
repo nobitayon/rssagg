@@ -6,10 +6,11 @@ import (
 	"os"
 	"net/http"
 	"database/sql"
+	"github.com/nobitayon/rssagg/internal/database"
 	"github.com/joho/godotenv"
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
-	"github.com/lib/pq"
+	_ "github.com/lib/pq"
 )
 
 func respondWithError(w http.ResponseWriter, code int, msg string) {
