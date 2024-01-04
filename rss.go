@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 	"time"
 	"io"
@@ -41,7 +40,6 @@ func urlToFeed(url string) (RSSFeed, error){
 	}
 	rssFeed:=RSSFeed{}
 	err = xml.Unmarshal(dat, &rssFeed)
-	fmt.Println("Here")
 
 	return rssFeed, nil
 }
